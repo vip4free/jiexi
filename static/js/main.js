@@ -33,7 +33,8 @@ for (const item of friends) {
 }
 
 // 获取默认路线
-let defaultRoute = localStorage.getItem('default') || 0
+const defaultValue = localStorage.getItem('default') || 0
+let defaultRoute = defaultValue < routes.length ? defaultValue : 0
 routeTitleEl.textContent = routes[defaultRoute].name
 
 // 播放功能
